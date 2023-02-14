@@ -1,5 +1,11 @@
 function findFirstDuplicate(arr) {
-  // type your code here
+  let elementSet = new Set();
+
+  for (let i = 0; i < arr.length; i++) {
+    if(elementSet.has(arr[i])) return arr[i];
+    elementSet.add(arr[i]);
+}
+return -1
 }
 
 if (require.main === module) {
@@ -17,3 +23,5 @@ module.exports = findFirstDuplicate;
 
 // Please add your pseudocode to this file
 // And a written explanation of your solution
+
+//Using elementSet we are storing each value from an array and assigning it as a unique value.
